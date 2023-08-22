@@ -1,0 +1,32 @@
+<%-include("partials/header.ejs") %>
+
+<!-- header content -->
+<h1 class=" title-heading">Manage Your Tasks</h1>
+<div class="task-switching">
+  <form action="/index" method="POST">
+    <input type="submit" value="daily-task" />
+
+  </form>
+  <form action="/WorkSelected" method="POST">
+    <input type="submit" value="work-task" />
+  </form>
+</div>
+
+<div class="type-selected col-lg-7 col-md-6 col-sm-11 col-xl-6">
+
+</div>
+<div class="tasks-list">
+  <% for(let i=0;i<list1.length;i++) { %>
+    <h3 class="single-task">
+        <input type="checkbox" class="checkbox" name="checkbox" id="checkbox">
+        <p class="content"><%=list1[i] %></p>
+    </h3>
+    <% } %>
+    <form class="item" action="/submit" method="post">
+      <input name="input_value" type="text" id="task-textbox" class="form-control" placeholder="add task" aria-label="Recipient's username" aria-describedby="basic-addon2">
+      <button type="submit" value="list" class="btn btn-outline-secondary" type="button">+</button>
+    </form>
+</div>
+
+
+<%-include("partials/footer.ejs") %>

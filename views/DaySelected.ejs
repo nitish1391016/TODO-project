@@ -1,0 +1,28 @@
+<%-include("partials/header.ejs") %>
+
+<!-- header content -->
+<h1 class="title-heading">Manage Your Tasks</h1>
+<div class="task-switching">
+  <form action="/DaySelected" method="POST">
+    <input type="submit" value="daily-task" />
+  </form>
+  <form action="/WorkSelected" method="POST">
+    <input type="submit" value="work-task" />
+  </form>
+</div>
+
+<div class="tasks-list">
+  <% for(let i=0;i<list.length;i++) { %>
+    <h3>
+      <%=list[i] %>
+    </h3>
+    <% } %>
+    <div class="input-group mb-3">
+      <input type="text" id="task-textbox" class="form-control" placeholder="add task" aria-label="Recipient's username" aria-describedby="basic-addon2">
+      <div class="input-group-append">
+        <button onclick="getValues()" class="btn btn-outline-secondary" type="button">+</button>
+      </div>
+    </div>
+</div>
+
+<%-include("partials/footer.ejs") %>

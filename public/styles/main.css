@@ -1,0 +1,63 @@
+body{
+    background-color: aquamarine;
+}
+.title-heading{
+    background-color: rgb(238, 208, 213);
+    color: blue;
+    display: flex;
+    justify-content: center;
+}
+
+.task-switching{
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.task-switching input{
+    border-radius: 10px;
+}
+
+.tasks-list{
+    background-color: blueviolet;
+    border: 2px solid black;
+    margin: 5% 26%;
+    min-height: 200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2px;
+    padding-top: 20px;
+}
+
+.input-group{
+    width: 80%;
+    color: black;
+    border-radius: 10px;
+}
+
+.btn-outline-secondary{
+    color: black;
+    border: 1px solid black;
+    margin-left: 5px ;
+}
+
+.single-task{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+
+}
+
+#checkbox{
+    align-self:self-start;
+    height: 30px;
+    width: 30px;
+    border-radius: 40px;
+}
+
+.cut{
+    text-decoration: line-through;
+}
