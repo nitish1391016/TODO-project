@@ -16,10 +16,10 @@
 
 </div>
 <div class="tasks-list">
-  <% for(let i=0;i<list1.length;i++) { %>
+  <% for(let i=0;i<list.length;i++) { %>
     <h3 class="single-task">
         <input type="checkbox" class="checkbox" name="checkbox" id="checkbox">
-        <p class="content"><%=list1[i] %></p>
+        <p class="content"><%=list[i] %></p>
     </h3>
     <% } %>
     <form class="item" action="/submit" method="post">

@@ -22,33 +22,21 @@ body{
 .tasks-list{
     background-color: blueviolet;
     border: 2px solid black;
-    margin: 5% 26%;
-    min-height: 200px;
+    margin: auto;
+    margin-top: 40px;
+    width: 800px;
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 2px;
-    padding-top: 20px;
+    padding: 20px 50px 10px 20px;
 }
-
-.input-group{
-    width: 80%;
-    color: black;
-    border-radius: 10px;
-}
-
-.btn-outline-secondary{
-    color: black;
-    border: 1px solid black;
-    margin-left: 5px ;
-}
-
 .single-task{
-    display: flex;
+    display: inline-flex;
     flex-direction: row;
-    align-items: center;
-    width: 100%;
-
+    align-self: flex-start;
+    gap: 20px;
+    margin-left: 40px;
 }
 
 #checkbox{
@@ -58,6 +46,19 @@ body{
     border-radius: 40px;
 }
 
+.btn-outline-secondary{
+    color: black;
+    border: 1px solid black;
+    margin-left: 5px ;
+}
+
+.item{
+    display: flex;
+    flex-direction: row;
+    gap: 12px;
+}
+
+/* to add and remove for strike */
 .cut{
     text-decoration: line-through;
 }

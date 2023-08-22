@@ -15,21 +15,24 @@ var dailyRunning=true;
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 
-const list1 = ["sham","babu","singha","roy"];
-const list2 = ["sdlfj","bsdabu","hgsingha","ardoy"];
+const list1 = [];
+const list2 = [];
 
 
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.static(__dirname));
+let list=[];
 app.get("/", (req, res) => {
   if(dailyRunning){
+    list=list1;
     res.render("index.ejs",{
-      list1
+      list
     });
   }
   else{
+    list=list2;
     res.render("index.ejs",{
-      list2
+      list
     });
   }
 });
@@ -37,30 +40,35 @@ app.get("/", (req, res) => {
 app.post("/index",(req,res)=>{  
   dailyRunning=true;
   if(dailyRunning){
+    list=list1
     res.render("index.ejs",{
-      list1
+      list
     });
   }
   else{
+    list=list2
     res.render("index.ejs",{
-      list2
+      list
     });
   }
 });
 
+
 app.post("/submit",(req,res)=>{ 
   var ele=req.body.input_value;
   if(ele!="" && dailyRunning==true){
-    res.render("index.ejs",{
-      list1
-    });
     list1.push(ele);
-  }
-  else  {
+    list=list1;
     res.render("index.ejs",{
-      list2
+      list
     });
+  }
+  else if(ele!="") {
     list2.push(ele);
+    list=list2;
+    res.render("index.ejs",{
+      list
+    });
   }
   
 });
@@ -72,8 +80,9 @@ app.post("/click",(req,res)=>{
 
 app.post("/WorkSelected",(req,res)=>{
   dailyRunning=false;
-    res.render("WorkSelected.ejs",{
-        list2
+    list=list2;
+    res.render("index.ejs",{
+        list
     });
 });
 app.get("/button",(req,res)=>{
