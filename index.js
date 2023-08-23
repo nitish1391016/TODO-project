@@ -47,6 +47,8 @@ const list2 = [
   "Conduct user testing",
   "Schedule social media posts"
 ];
+let check1={};
+let check2={};
 
 
 
@@ -56,7 +58,8 @@ let list=[];
 app.get("/", (req, res) => {
   list=dailyRunning ? list1: list2;
   res.render("index.ejs",{
-    list
+    list,
+    check: dailyRunning ? check1 : check2
   });
 });
 
@@ -76,16 +79,26 @@ app.post("/submit",(req,res)=>{
   res.redirect("/");
 });
 
-app.post("/click",(req,res)=>{
-  console.log("sham");
-});
+
+// update
+app.post("/update",(req,res)=>{
+  var isChecked=req.body.isChecked;
+  var isDailyOne=req.body.isDailyOne;
+  var index=req.body.index;
+  var check= dailyRunning ? check1 : check2;
+  check[index]=isChecked;
+  res.sendStatus(200);
+})
+
 
 
 app.post("/WorkSelected",(req,res)=>{
   dailyRunning=false;
     list=list2;
+    var check=dailyRunning ? check1: check2
     res.render("index.ejs",{
-        list
+        list,
+        check
     });
 });
 app.get("/button",(req,res)=>{

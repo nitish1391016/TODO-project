@@ -4,11 +4,11 @@
 <h1 class=" title-heading">Manage Your Tasks</h1>
 <div class="task-switching">
   <form action="/index" method="POST">
-    <input class="daily-button" type="submit" value="Daily To-Do" />
+    <input class="daily-button type-button" type="submit" name="true" value="Daily To-Do" />
 
   </form>
   <form action="/WorkSelected" method="POST">
-    <input class="work-button" type="submit" value="Professional Tasks" />
+    <input class="work-button type-button" type="submit" name="false" value="Professional Tasks" />
   </form>
 </div>
 
@@ -19,8 +19,12 @@
     <div class="only_tasks">
       <% for(let i=0;i<list.length;i++) { %>
         <h3 class="single-task">
-            <input type="checkbox" class="checkbox" name="checkbox" id="checkbox">
-            <p class="content"><%=list[i] %></p>
+            <input type="checkbox" class="checkbox" name="item<%=i %>" 
+            <% if(check[i+""]=="true") {%>
+              checked
+              <% } %>
+            id="checkbox">
+            <p class="content"><%=list[i]  %></p>
         </h3>
         <% } %>
     </div>
