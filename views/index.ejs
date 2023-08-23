@@ -18,7 +18,11 @@
 <div class="tasks-list">
     <div class="only_tasks">
       <% for(let i=0;i<list.length;i++) { %>
-        <h3 class="single-task">
+        <h3 class="single-task 
+        <% if(check[i+""]=="true") {%>
+          cut
+          <% } %>
+        ">
             <input type="checkbox" class="checkbox" name="item<%=i %>" 
             <% if(check[i+""]=="true") {%>
               checked

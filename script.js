@@ -6,6 +6,8 @@ $(".type-button").on("click",function(){
     //  console.log(isDailyOne)
  })
  var index="";
+
+
 $(".checkbox").on("click",function (){
     for(var i=0;i<$(".single-task").length;i++) {
         var ele=$(".single-task")[i].childNodes[1];
@@ -23,15 +25,16 @@ $(".checkbox").on("click",function (){
     }
 })
 
-// $(".checkbox").on("click",function (){
-//     // console.log($(this).attr("name"))
-//     // console.log(isDailyOne)
-//     console.log($(this).parent())
-//     $.post('/update',{
-//         index:$(this).attr("name"),
-//         isDailyOne:$(this).attr("name"),
-//         isChecked:$(this).checked
+callFirst();
+function callFirst(){
+    // console.log($(this).attr("name"))
+    // console.log(isDailyOne)
+    console.log($(this).parent())
+    $.post('/update',{
+        index:$(this).attr("name"),
+        isDailyOne:$(this).attr("name"),
+        isChecked:$(this).checked
 
-//     })
-// })
+    })
+}
 

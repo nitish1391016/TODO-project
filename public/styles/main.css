@@ -1,6 +1,14 @@
+/* <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@10..48,600&display=swap" rel="stylesheet"> */
+@import url('https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@10..48,600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital@1&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@10..48,800&display=swap');
 body{
     background-color: #F2BED1;
     color: #F2BED1;
+
+    
     /* background-image: url("data:image/svg+xml,<svg id='patternId' width='100%' height='100%' xmlns='http://www.w3.org/2000/svg'><defs><pattern id='a' patternUnits='userSpaceOnUse' width='32' height='32' patternTransform='scale(1) rotate(0)'><rect x='0' y='0' width='100%' height='100%' fill='hsla(0,0%,100%,1)'/><path d='M40 16h-6m-4 0h-6m8 8v-6m0-4V8M8 16H2m-4 0h-6m8 8v-6m0-4V8'  stroke-linecap='square' stroke-width='1' stroke='hsla(258.5,59.4%,59.4%,1)' fill='none'/><path d='M16-8v6m0 4v6m8-8h-6m-4 0H8m8 24v6m0 4v6m8-8h-6m-4 0H8'  stroke-linecap='square' stroke-width='1' stroke='hsla(339.6,82.2%,51.6%,1)' fill='none'/></pattern></defs><rect width='800%' height='800%' transform='translate(0,0)' fill='url(%23a)'/></svg>") */
 }
 .title-heading{
@@ -8,6 +16,9 @@ body{
     color: #F9F5F6;
     display: flex;
     justify-content: center;
+    font-family: 'Bricolage Grotesque', sans-serif;
+
+    
 }
 
 .daily-button, .work-button{
@@ -15,6 +26,9 @@ body{
     color: #F2BED1;
     border: #FDCEDF;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+    font-family: 'Bricolage Grotesque', sans-serif;
+    padding: 3px 50px;
+    font-size: large;
 }
 
 
@@ -44,6 +58,7 @@ body{
     padding: 20px 50px 10px 20px;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
     border-radius: 13px;
+    font-family: 'Ubuntu', sans-serif;
 }
 
 .only_tasks{
@@ -70,15 +85,21 @@ body{
 }
 
 .btn-outline-secondary{
-    color: #F2BED1;
+    color: #F9F5F6;
     border: 1px solid black;
     margin-left: 5px ;
+    background-color: #F2BED1;
 }
 
 .item{
     display: flex;
     flex-direction: row;
     gap: 12px;
+    width: 70%;
+    margin-bottom: 20px;
+}
+#task-textbox{
+    background-color: #FDCEDF;
 }
 
 /* to add and remove for strike */
