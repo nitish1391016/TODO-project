@@ -4,11 +4,11 @@
 <h1 class=" title-heading">Manage Your Tasks</h1>
 <div class="task-switching">
   <form action="/index" method="POST">
-    <input type="submit" value="daily-task" />
+    <input class="daily-button" type="submit" value="Daily To-Do" />
 
   </form>
   <form action="/WorkSelected" method="POST">
-    <input type="submit" value="work-task" />
+    <input class="work-button" type="submit" value="Professional Tasks" />
   </form>
 </div>
 
@@ -16,14 +16,16 @@
 
 </div>
 <div class="tasks-list">
-  <% for(let i=0;i<list.length;i++) { %>
-    <h3 class="single-task">
-        <input type="checkbox" class="checkbox" name="checkbox" id="checkbox">
-        <p class="content"><%=list[i] %></p>
-    </h3>
-    <% } %>
+    <div class="only_tasks">
+      <% for(let i=0;i<list.length;i++) { %>
+        <h3 class="single-task">
+            <input type="checkbox" class="checkbox" name="checkbox" id="checkbox">
+            <p class="content"><%=list[i] %></p>
+        </h3>
+        <% } %>
+    </div>
     <form class="item" action="/submit" method="post">
-      <input name="input_value" type="text" id="task-textbox" class="form-control" placeholder="add task" aria-label="Recipient's username" aria-describedby="basic-addon2">
+      <input name="input_value" type="text" id="task-textbox" class="form-control" placeholder="Add a new task..." aria-label="Recipient's username" aria-describedby="basic-addon2">
       <button type="submit" value="list" class="btn btn-outline-secondary" type="button">+</button>
     </form>
 </div>

@@ -1,12 +1,22 @@
 body{
-    background-color: aquamarine;
+    background-color: #F2BED1;
+    color: #F2BED1;
+    /* background-image: url("data:image/svg+xml,<svg id='patternId' width='100%' height='100%' xmlns='http://www.w3.org/2000/svg'><defs><pattern id='a' patternUnits='userSpaceOnUse' width='32' height='32' patternTransform='scale(1) rotate(0)'><rect x='0' y='0' width='100%' height='100%' fill='hsla(0,0%,100%,1)'/><path d='M40 16h-6m-4 0h-6m8 8v-6m0-4V8M8 16H2m-4 0h-6m8 8v-6m0-4V8'  stroke-linecap='square' stroke-width='1' stroke='hsla(258.5,59.4%,59.4%,1)' fill='none'/><path d='M16-8v6m0 4v6m8-8h-6m-4 0H8m8 24v6m0 4v6m8-8h-6m-4 0H8'  stroke-linecap='square' stroke-width='1' stroke='hsla(339.6,82.2%,51.6%,1)' fill='none'/></pattern></defs><rect width='800%' height='800%' transform='translate(0,0)' fill='url(%23a)'/></svg>") */
 }
 .title-heading{
-    background-color: rgb(238, 208, 213);
-    color: blue;
+    background-color: #FDCEDF;
+    color: #F9F5F6;
     display: flex;
     justify-content: center;
 }
+
+.daily-button, .work-button{
+    background-color: #F9F5F6;
+    color: #F2BED1;
+    border: #FDCEDF;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+}
+
 
 .task-switching{
     margin-top: 30px;
@@ -20,17 +30,29 @@ body{
 }
 
 .tasks-list{
-    background-color: blueviolet;
-    border: 2px solid black;
+    background-color: #F9F5F6;
+    border: 2px solid #FDCEDF;
+    color: #F2BED1;
     margin: auto;
     margin-top: 40px;
     width: 800px;
+    min-height: 300px;
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 2px;
     padding: 20px 50px 10px 20px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+    border-radius: 13px;
 }
+
+.only_tasks{
+    min-height: 250px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
 .single-task{
     display: inline-flex;
     flex-direction: row;
@@ -43,11 +65,12 @@ body{
     align-self:self-start;
     height: 30px;
     width: 30px;
-    border-radius: 40px;
+    border-radius: 50%;
+    
 }
 
 .btn-outline-secondary{
-    color: black;
+    color: #F2BED1;
     border: 1px solid black;
     margin-left: 5px ;
 }
@@ -60,5 +83,5 @@ body{
 
 /* to add and remove for strike */
 .cut{
-    text-decoration: line-through;
+    color:rgb(174, 235, 156);text-decoration:line-through
 }
